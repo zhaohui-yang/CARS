@@ -4,4 +4,10 @@ Pytorch code for paper: [CARS: Continuous Evolution for Efficient Neural Archite
 
 By Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi Tian, Chang Xu.
 
-Huawei Noah Ark Lab.
+Huawei Noah's Ark Lab.
+
+### Introduction
+
+This repository contains the codes of CARS searching by considering the number of parameters and latency.
+
+### Results
