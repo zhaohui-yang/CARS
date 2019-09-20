@@ -6,11 +6,10 @@ By Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi T
 
 Huawei Noah's Ark Lab.
 
-All the searching and training codes will be uploaded soon.
-
 ### Introduction
 
-This repository contains the codes of CARS searching by considering acc + (params/latency).
+This repository contains the codes of CARS searching by considering acc + (params/latency). All the searching and training codes will be uploaded soon.
+
 
 ### Results
 
