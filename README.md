@@ -14,6 +14,17 @@ This repository contains the codes of CARS searching by considering acc + (param
 
 ### Results
 
+CARS search on the CIFAR-10 dataset.
+
+![cars_cifar](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_cifar.png)
+
+Evaluate on ImageNet dataset.
+
+![cars_imagenet](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_imagenet.png)
+
+Search by latency.
+
+![cars_imagenet_latency](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_imagenet_latency.png)
 
 ### Architectures
 
