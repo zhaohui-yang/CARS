@@ -8,7 +8,7 @@ Huawei Noah's Ark Lab.
 
 ### Introduction
 
-This repository contains the codes of CARS searching by considering acc + (params/latency). All the searching and training codes will be uploaded soon.
+This repository contains the codes of CARS searching by considering acc + (params/latency). All the searching and training codes have been embedded in automl project and will be released together.
 
 
 ### Results
