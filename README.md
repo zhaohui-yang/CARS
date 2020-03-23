@@ -1,31 +1,39 @@
 # CARS
 
-Pytorch code for paper: [CARS: Continuous Evolution for Efficient Neural Architecture Search](https://arxiv.org/pdf/1909.04977.pdf)
-
-By Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi Tian, Chang Xu.
-
-Huawei Noah's Ark Lab.
-
-### Introduction
-
-This repository contains the codes of CARS searching by considering acc + (params/latency). All the searching and training codes have been embedded in automl project and will be released together.
+[1] Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi Tian, and Chang Xu. [CARS: Continuous Evolution for Efficient Neural Architecture Search](https://arxiv.org/pdf/1909.04977.pdf). CVPR 2020.
 
 
-### Results
 
-CARS search on the CIFAR-10 dataset.
+## Introduction
 
-![cars_cifar](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_cifar.png)
+This repository contains the supplementary material of CARS. All the searching and training codes have been embedded in Huawei AutoML pipeline and will be released together.
 
-Evaluate on ImageNet dataset.
 
-![cars_imagenet](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_imagenet.png)
+## Results and Architectures
 
-Search by latency.
+CARS searches on the CIFAR-10 dataset, and evaluate on CIFAR-10 and ImageNet datasets. Multi-objectives are taken into consideration during searching.
 
-![cars_imagenet_latency](https://github.com/huawei-noah/CARS/blob/master/figs/results/cars_imagenet_latency.png)
+### Objectives: Acc + Params
 
-### Architectures
+Results on the CIFAR-10 dataset.
+
+<table border="0">
+<tr>
+    <td>
+    <img src="./figs/results/cars_cifar.png" width="100%" />
+    </td>
+</tr>
+</table>
+
+Results on the ImageNet dataset.
+
+<table border="0">
+<tr>
+    <td>
+    <img src="./figs/results/cars_imagenet.png" width="100%" />
+    </td>
+</tr>
+</table>
 
 ```python
 
@@ -46,6 +54,20 @@ CARS_G = Genotype(normal=[('max_pool_3x3', 0), ('dil_conv_5x5', 1), ('sep_conv_3
 CARS_H = Genotype(normal=[('sep_conv_5x5', 0), ('sep_conv_3x3', 1), ('sep_conv_3x3', 0), ('dil_conv_5x5', 2), ('avg_pool_3x3', 0), ('skip_connect', 1), ('sep_conv_5x5', 2), ('max_pool_3x3', 0)], normal_concat=range(2, 6), reduce=[('sep_conv_5x5', 0), ('max_pool_3x3', 1), ('sep_conv_3x3', 0), ('skip_connect', 1), ('dil_conv_3x3', 2), ('max_pool_3x3', 0), ('sep_conv_5x5', 0), ('avg_pool_3x3', 3)], reduce_concat=range(2, 6))
 
 CARS_I = Genotype(normal=[('sep_conv_3x3', 0), ('sep_conv_3x3', 1), ('skip_connect', 0), ('sep_conv_5x5', 1), ('skip_connect', 2), ('sep_conv_3x3', 3), ('sep_conv_3x3', 0), ('dil_conv_5x5', 4)], normal_concat=range(2, 6), reduce=[('dil_conv_3x3', 0), ('skip_connect', 1), ('max_pool_3x3', 0), ('max_pool_3x3', 2), ('skip_connect', 1), ('sep_conv_5x5', 3), ('dil_conv_3x3', 1), ('max_pool_3x3', 4)], reduce_concat=range(2, 6))
+
+```
+
+### Objectives: Acc + Latency
+
+<table border="0">
+<tr>
+    <td>
+    <img src="./figs/results/cars_imagenet_latency.png" width="100%" />
+    </td>
+</tr>
+</table>
+
+```python
 
 CARS_Lat_A = Genotype(normal=[('skip_connect',0),('max_pool_3x3',1),('avg_pool_3x3',0),('max_pool_3x3',1),('skip_connect',2),('skip_connect',3),('skip_connect',2),('skip_connect',3)],normal_concat=range(2,6),reduce=[('skip_connect',0),('sep_conv_5x5',1),('dil_conv_5x5',0),('max_pool_3x3',2),('skip_connect',0),('max_pool_3x3',1),('skip_connect',1),('avg_pool_3x3',4)],reduce_concat=range(2,6))
 
