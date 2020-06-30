@@ -1,6 +1,6 @@
 # CARS
 
-[1] Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi Tian, and Chang Xu. [CARS: Continuous Evolution for Efficient Neural Architecture Search](https://arxiv.org/pdf/1909.04977.pdf). CVPR 2020.
+[1] Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu, Qi Tian, and Chang Xu. [CARS: Continuous Evolution for Efficient Neural Architecture Search](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_CARS_Continuous_Evolution_for_Efficient_Neural_Architecture_Search_CVPR_2020_paper.pdf). CVPR 2020. [[paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_CARS_Continuous_Evolution_for_Efficient_Neural_Architecture_Search_CVPR_2020_paper.pdf)] [[code](https://github.com/huawei-noah/vega)]
 
 
 
